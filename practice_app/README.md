@@ -20,10 +20,9 @@ samples, guidance on mobile development, and a full API reference.
 assets:
     - files/images/
 
- 2. debugShowCheckedModeBanner: false, To erase debug mark from the app at screen top
+ 2. ```debugShowCheckedModeBanner: false,``` To erase debug mark from the app at screen top
 Show Image:
  3. Image(image: AssetImage('files/images/aa.png')), // file location
  4. Image(image: NetworkImage('url')), //  url of the image
  5. Change icon
-![GitHub Logo](files/images/ChangeApp_IconAndroid.JPG)
-Format: ![Alt Text](url)
+![Change Icon Android](files/images/ChangeApp_IconAndroid.JPG)
