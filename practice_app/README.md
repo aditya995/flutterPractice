@@ -17,9 +17,10 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Class Notes
  -  Uncomment line: 61 in *pubspec.yaml*, To Use files in the project.
+```
 assets:
     - files/images/
-
+```
  -  ```debugShowCheckedModeBanner: false,``` To erase debug mark from the app at screen top
 
  -  Show Image:
