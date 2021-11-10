@@ -32,4 +32,3 @@ assets:
  -  To Change App Name IOS: go to the `Info.plist` file
 
 ![Change App Name IOS](files/images/ChangeAppNameIOS.JPG)
-
