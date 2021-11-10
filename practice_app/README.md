@@ -25,5 +25,5 @@ Show Image:
  3. Image(image: AssetImage('files/images/aa.png')), // file location
  4. Image(image: NetworkImage('url')), //  url of the image
  5. Change icon
-![GitHub Logo](../../ChangeApp_IconAndroid.JPG)
+![GitHub Logo](files/images/ChangeApp_IconAndroid.JPG)
 Format: ![Alt Text](url)
