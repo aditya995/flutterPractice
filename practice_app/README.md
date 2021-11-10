@@ -16,5 +16,14 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 ## Class Notes
- - Uncomment line: 61, To Use files in 
- - 
+ 1. Uncomment line: 61 in *pubspec.yaml*, To Use files in the project.
+assets:
+    - files/images/
+
+ 2. debugShowCheckedModeBanner: false, To erase debug mark from the app at screen top
+Show Image:
+ 3. Image(image: AssetImage('files/images/aa.png')), // file location
+ 4. Image(image: NetworkImage('url')), //  url of the image
+ 5. Change icon
+![GitHub Logo](../../ChangeApp_IconAndroid.JPG)
+Format: ![Alt Text](url)
