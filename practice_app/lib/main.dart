@@ -20,13 +20,13 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Center(
-            child: Text("Great work!"),
+            child: Text("The worst app in history"),
           ),
-          backgroundColor: Colors.black38,
+          backgroundColor: Colors.black26,
         ),
-        backgroundColor: Colors.black87,
+        backgroundColor: Colors.white,
         body: const Center(
-          child: Image(image: AssetImage('files/images/aa.png')),
+          child: Image(image: AssetImage('files/images/box.png')),
         ),
       ),
     );
