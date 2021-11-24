@@ -20,10 +20,17 @@ class LoadingScreen extends StatelessWidget {
             direction: Axis.vertical,
             children: [
               Expanded(
-                child: new MyFrame(str: 'Hills1'),
+                child: new MyFrame(
+                  str: 'Hills',
+                  imgAdd: 'files/images/1.jpg',
+                ),
               ),
               Expanded(
-                child: new MyFrame(str: 'Hills2'),
+                child: new MyFrame(
+                  str:
+                      'Mountains\n\n\n\n\n\n\n\njkskdjsjkdsj\n\n\n\n\n\n\nsdfsdf',
+                  imgAdd: 'files/images/2.jpg',
+                ),
               ),
             ],
           ),
@@ -31,10 +38,16 @@ class LoadingScreen extends StatelessWidget {
             direction: Axis.vertical,
             children: [
               Flexible(
-                child: new MyFrame(str: 'Hills3'),
+                child: new MyFrame(
+                  str: 'WaterFalls',
+                  imgAdd: 'files/images/3.jpg',
+                ),
               ),
               Flexible(
-                child: new MyFrame(str: 'Hills4'),
+                child: new MyFrame(
+                  str: 'Desert',
+                  imgAdd: 'files/images/4.jpg',
+                ),
               ),
             ],
           ),
