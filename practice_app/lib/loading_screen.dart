@@ -20,7 +20,7 @@ class LoadingScreen extends StatelessWidget {
             direction: Axis.vertical,
             children: [
               Expanded(
-                child: new MyFrame('Hills1'),
+                child: new MyFrame(str: 'Hills1'),
               ),
               Expanded(
                 child: new MyFrame(str: 'Hills2'),

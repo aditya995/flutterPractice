@@ -3,6 +3,8 @@ import 'main.dart';
 
 class MyFrame extends StatelessWidget {
   const MyFrame({required String str, Key? key}) : super(key: key);
+// TODO:: Change this getter !!!
+  String get str => 'Why \n\n\n\n\n\n\nnot change ';
 
   @override
   Widget build(BuildContext context) {
@@ -16,15 +18,16 @@ class MyFrame extends StatelessWidget {
       decoration: BoxDecoration(
         border: Border.all(width: 2, color: Colors.blue),
         borderRadius: BorderRadius.all(Radius.circular(10)),
+        image: DecorationImage(image: AssetImage('files/images/1.jpg')),
       ),
       child: Column(
         children: [
           Text(str),
-          Image.asset(
-            'files/images/1.jpg',
-            color: Colors.amber[600],
-            colorBlendMode: BlendMode.overlay,
-          ),
+          // Image.asset(
+          //   'files/images/1.jpg',
+          //   color: Colors.amber[600],
+          //   colorBlendMode: BlendMode.overlay,
+          // ),
         ],
       ),
     );
