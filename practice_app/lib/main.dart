@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'loading_screen.dart';
-import 'single_child_scroll_view.dart';
+import 'my_gallery.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,9 +13,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Nature Gallery',
-      home: MySingleChildScrollView(),
-      // home: LoadingScreen(),
+      title: 'Gallery Page',
+      home: MyGallery(),
     );
   }
 }
