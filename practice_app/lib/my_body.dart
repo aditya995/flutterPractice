@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:practice_app/img_lists.dart';
+import 'package:practice_app/posts.dart';
 
 class MyBody extends StatelessWidget {
-  const MyBody({Key? key}) : super(key: key);
+  final postNumber;
+  const MyBody({Key? key, required this.postNumber}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -194,7 +196,16 @@ class MyBody extends StatelessWidget {
                       )
                     : SizedBox(),
 
-                // Featured ****************************************
+                // Posts ****************************************
+
+                Column(
+                  children: <Widget>[
+                    for (var i = 1; i <= postNumber; i++)
+                      Posts(
+                        count: i,
+                      ),
+                  ],
+                ),
               ],
             ),
           ),

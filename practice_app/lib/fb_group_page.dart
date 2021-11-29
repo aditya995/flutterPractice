@@ -21,7 +21,9 @@ class FbGroupPage extends StatelessWidget {
         child: Align(
           alignment: Alignment.center,
           child: Container(
-            child: const MyBody(),
+            child: const MyBody(
+              postNumber: 3,
+            ),
             width: 900,
           ),
         ),
