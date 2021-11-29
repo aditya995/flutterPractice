@@ -196,6 +196,17 @@ class MyBody extends StatelessWidget {
                       )
                     : SizedBox(),
 
+                Container(
+                  height: 1,
+                  color: Colors.black26,
+                ),
+                SizedBox(
+                  height: 50,
+                ),
+                Container(
+                  height: 1,
+                  color: Colors.black26,
+                ),
                 // Posts ****************************************
 
                 Column(
