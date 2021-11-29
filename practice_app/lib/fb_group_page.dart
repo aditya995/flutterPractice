@@ -11,7 +11,10 @@ class FbGroupPage extends StatelessWidget {
         child: Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: const MyHeadingNav(),
+        title: const MyHeadingNav(
+          bell: '1',
+          msg: '5',
+        ),
       ),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,

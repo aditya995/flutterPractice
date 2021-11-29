@@ -4,7 +4,10 @@ import 'menu_big.dart';
 import 'menu_sm.dart';
 
 class MyHeadingNav extends StatelessWidget {
-  const MyHeadingNav({Key? key}) : super(key: key);
+  final String bell;
+  final String msg;
+  const MyHeadingNav({Key? key, required this.bell, required this.msg})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -143,18 +146,40 @@ class MyHeadingNav extends StatelessWidget {
         Container(
           height: 40,
           width: 40,
-          child: FloatingActionButton(
-            backgroundColor: Colors.black12,
-            elevation: 0,
-            hoverElevation: 0,
-            highlightElevation: 0,
-            onPressed: () {},
-            child: const CircleAvatar(
-              backgroundColor: Colors.transparent,
-              radius: 10,
-              backgroundImage: AssetImage('files/images/msngr.png'),
+          color: Colors.transparent,
+          child: Stack(alignment: AlignmentDirectional.topEnd, children: [
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.red,
+                border: Border.all(color: Colors.transparent, width: 1),
+                borderRadius: BorderRadius.circular(15),
+              ),
+              height: 15,
+              constraints: const BoxConstraints(
+                minWidth: 15,
+              ),
+              child: Text(
+                msg,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
-          ),
+            FloatingActionButton(
+              backgroundColor: Colors.black12,
+              elevation: 0,
+              hoverElevation: 0,
+              highlightElevation: 0,
+              onPressed: () {},
+              child: const CircleAvatar(
+                backgroundColor: Colors.transparent,
+                radius: 10,
+                backgroundImage: AssetImage('files/images/msngr.png'),
+              ),
+            ),
+          ]),
         ),
         const SizedBox(
           width: 10,
@@ -165,18 +190,40 @@ class MyHeadingNav extends StatelessWidget {
         Container(
           height: 40,
           width: 40,
-          child: FloatingActionButton(
-            backgroundColor: Colors.black12,
-            elevation: 0,
-            hoverElevation: 0,
-            highlightElevation: 0,
-            onPressed: () {},
-            child: const CircleAvatar(
-              backgroundColor: Colors.transparent,
-              radius: 10,
-              backgroundImage: AssetImage('files/images/bell.png'),
+          color: Colors.transparent,
+          child: Stack(alignment: AlignmentDirectional.topEnd, children: [
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.red,
+                border: Border.all(color: Colors.transparent, width: 1),
+                borderRadius: BorderRadius.circular(15),
+              ),
+              height: 15,
+              constraints: const BoxConstraints(
+                minWidth: 15,
+              ),
+              child: Text(
+                bell,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
-          ),
+            FloatingActionButton(
+              backgroundColor: Colors.black12,
+              elevation: 0,
+              hoverElevation: 0,
+              highlightElevation: 0,
+              onPressed: () {},
+              child: const CircleAvatar(
+                backgroundColor: Colors.transparent,
+                radius: 10,
+                backgroundImage: AssetImage('files/images/bell.png'),
+              ),
+            ),
+          ]),
         ),
         const SizedBox(
           width: 10,
