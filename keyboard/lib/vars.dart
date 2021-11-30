@@ -66,7 +66,6 @@ var keysList4 = [
   'n',
   'm',
   'delete',
-  '/',
 ];
 var keysList4Cap = [
   'CapsOn',
@@ -78,7 +77,6 @@ var keysList4Cap = [
   'N',
   'M',
   'DELETE',
-  '?',
 ];
 var keysList5 = ['😁', '😄', '😆', '😎', 'space', '😍', '😵', '🥴', '😡'];
 var keysList5Cap = ['😱', '😭', '😒', '🙁', 'SPACE', '🙄', '😑', '😐', '🙂'];

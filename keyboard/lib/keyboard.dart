@@ -166,11 +166,13 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                                 child: (cap == true)
                                     ? Text(
                                         keysList1Cap[i],
-                                        style: TextStyle(color: Colors.white),
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 20),
                                       )
                                     : Text(
                                         keysList1[i],
-                                        style: TextStyle(color: Colors.white),
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 20),
                                       ),
                                 style: TextButton.styleFrom(
                                   side: BorderSide(
@@ -210,7 +212,8 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                                   (cap == true)
                                       ? keysList2Cap[i]
                                       : keysList2[i],
-                                  style: TextStyle(color: Colors.white),
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 20),
                                 ),
                                 style: TextButton.styleFrom(
                                   side: BorderSide(
@@ -264,7 +267,8 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                                         (cap == true)
                                             ? keysList3Cap[i]
                                             : keysList3[i],
-                                        style: TextStyle(color: Colors.white),
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 20),
                                       )
                                     : (keysList3[i] == 'enter')
                                         ? Icon(
@@ -336,7 +340,8 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                                         (cap == true)
                                             ? keysList4Cap[i]
                                             : keysList4[i],
-                                        style: TextStyle(color: Colors.white),
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 20),
                                       )
                                     : (keysList4[i] == 'delete')
                                         ? Icon(
