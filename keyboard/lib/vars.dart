@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 var currentKey = '';
-String inputFields = '';
+List inputFields = [];
 var cap = true;
 List saved = [];
 List timesOf_saved = [];
@@ -9,24 +9,16 @@ List timesOf_saved = [];
 // DateTime.now().minute;
 // print('timestamp: ${_now.hour}:${_now.minute}:${_now.second}.${_now.millisecond}');
 
-var keysList1 = [
-  '`',
-  '1',
-  '2',
-  '3',
-  '4',
-  '5',
-  '6',
-  '7',
-  '8',
-  '9',
-  '0',
-  '-',
-  '=',
-  'delete'
-];
+String inputStr(List a) {
+  var str = '';
+  a.forEach((element) {
+    str += element;
+  });
+  return str;
+}
+
+var keysList1 = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 var keysList1Cap = [
-  '~',
   '!',
   '@',
   '#',
@@ -37,9 +29,6 @@ var keysList1Cap = [
   '*',
   '(',
   ')',
-  '_',
-  '+',
-  'delete'
 ];
 var keysList2 = [
   'q',
@@ -52,9 +41,6 @@ var keysList2 = [
   'i',
   'o',
   'p',
-  '[',
-  ']',
-  '\\'
 ];
 var keysList2Cap = [
   'Q',
@@ -67,41 +53,32 @@ var keysList2Cap = [
   'I',
   'O',
   'P',
-  '{',
-  '}',
-  '|'
 ];
-var keysList3 = [
+var keysList3 = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'enter'];
+var keysList3Cap = ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'ENTER'];
+var keysList4 = [
   'CapsOff',
-  'a',
-  's',
-  'd',
-  'f',
-  'g',
-  'h',
-  'j',
-  'k',
-  'l',
-  ';',
-  '\'',
-  'enter'
+  'z',
+  'x',
+  'c',
+  'v',
+  'b',
+  'n',
+  'm',
+  'delete',
+  '/',
 ];
-var keysList3Cap = [
+var keysList4Cap = [
   'CapsOn',
-  'A',
-  'S',
-  'D',
-  'F',
-  'G',
-  'H',
-  'J',
-  'K',
-  'L',
-  ':',
-  '"',
-  'enter'
+  'Z',
+  'X',
+  'C',
+  'V',
+  'B',
+  'N',
+  'M',
+  'DELETE',
+  '?',
 ];
-var keysList4 = ['.', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/', '.'];
-var keysList4Cap = ['.', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '<', '>', '?', '.'];
-var keysList5 = ['space'];
-var keysList5Cap = ['space'];
+var keysList5 = ['😁', '😄', '😆', '😎', 'space', '😍', '😵', '🥴', '😡'];
+var keysList5Cap = ['😱', '😭', '😒', '🙁', 'SPACE', '🙄', '😑', '😐', '🙂'];

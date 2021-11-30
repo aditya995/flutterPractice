@@ -31,15 +31,16 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
             ),
             child: Column(
               children: [
-                //  Area Before keyboard
+                //  Area Before keyboard  ****************************************************
                 Container(
                   constraints: BoxConstraints(
-                    minHeight: heightS - 200,
+                    minHeight: (heightS - 275 < 0) ? 0 : heightS - 275,
                     // maxHeight: 150,
                   ),
                   color: Colors.blue[400],
                   child: Column(
                     children: [
+                      //  Posts viewing container ******************************************
                       SingleChildScrollView(
                         reverse: true,
                         scrollDirection: Axis.horizontal,
@@ -60,7 +61,7 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                                   borderRadius: BorderRadius.circular(10),
                                 ),
                                 child: Text(
-                                  'Time when saved : ${timesOf_saved[i]}\n Post: Id#__${i + 1}\n${saved[i]}',
+                                  'Time when saved : ${timesOf_saved[i]}\n Post: Id#__${i + 1}\n${inputStr(saved[i])}',
                                   overflow: TextOverflow.clip,
                                   style: TextStyle(
                                     fontWeight: FontWeight.w900,
@@ -73,12 +74,16 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                       SizedBox(
                         height: 100,
                       ),
+
+                      //  Heading Before Input area *******************************************
                       Text(
                         'Start Writing below!!!',
                         style: TextStyle(
                           fontWeight: FontWeight.w600,
                         ),
                       ),
+
+                      //  Input field ************************************************************
                       Container(
                         constraints: BoxConstraints(
                           minWidth: 200,
@@ -91,15 +96,18 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: SingleChildScrollView(
-                            reverse: true, child: Text('${inputFields}|')),
+                            reverse: true,
+                            child: Text('${inputStr(inputFields)}|')),
                       ),
+
+                      //  Save it button ***********************************************************
                       TextButton(
                         onPressed: () {
                           setState(() {
                             timesOf_saved.add(
                                 '${DateTime.now().hour}:${DateTime.now().minute}:${DateTime.now().second} (h/m/s), date: ${DateTime.now().month}/${DateTime.now().day}/${DateTime.now().year} (M/D/Y)');
-                            saved.add(inputFields);
-                            inputFields = '';
+                            saved.add([...inputFields]);
+                            inputFields.clear();
                           });
                         },
                         child: Text(
@@ -109,29 +117,17 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                         style: TextButton.styleFrom(
                             backgroundColor: Colors.green[800]),
                       ),
+
+                      //  Display Current Button which is pressed !! *********************************************
                       SizedBox(
                         height: 35,
-                        width: 120,
-                        child: TextButton(
-                          onPressed: () {},
-                          onLongPress: () {
-                            setState(() {
-                              inputFields = '';
-                            });
-                          },
-                          child: Text(
-                            currentKey,
-                            style: TextStyle(color: Colors.white),
-                          ),
-                          style: TextButton.styleFrom(
-                            side: BorderSide(
-                              color: Colors.white,
-                              width: 1,
-                            ),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(5),
-                            ),
-                          ),
+                        width: 150,
+                        child: Text(
+                          '[Pressed:   ' + currentKey + '  ]',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Colors.black,
+                              backgroundColor: Colors.white),
                         ),
                       ),
                     ],
@@ -140,7 +136,7 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
 
                 // Keys in the keyboard   ***************************************
                 Container(
-                  height: 200,
+                  height: 275,
                   width: widthS,
                   color: Colors.black87,
                   child: Column(
@@ -150,50 +146,30 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                         children: [
                           for (var i = 0; i < keysList1.length; i++)
                             SizedBox(
-                              height: 35,
+                              height: 50,
                               width: widthS / keysList1.length,
                               child: TextButton(
                                 onPressed: () {
                                   setState(() {
-                                    if (keysList1[i] == 'delete') {
-                                      var sub = inputFields.substring(
-                                          0,
-                                          (inputFields.length - 1 < 0)
-                                              ? 0
-                                              : inputFields.length - 1);
-                                      inputFields = sub;
-                                      currentKey = keysList1[i];
-                                    } else if (cap == true) {
-                                      inputFields += keysList1Cap[i];
+                                    if (cap == true) {
+                                      inputFields.add(keysList1Cap[i]);
                                       currentKey = keysList1Cap[i];
                                     } else {
-                                      inputFields += keysList1[i];
+                                      inputFields.add(keysList1[i]);
                                       currentKey = keysList1[i];
                                     }
                                   });
                                 },
-                                onLongPress: () {
-                                  setState(() {
-                                    inputFields = '';
-                                  });
-                                },
-                                child: (keysList1[i] == 'delete')
-                                    ? Icon(
-                                        Icons.cancel_presentation_rounded,
-                                        color: Colors.white,
-                                        size: 15,
+                                onLongPress: () {},
+                                child: (cap == true)
+                                    ? Text(
+                                        keysList1Cap[i],
+                                        style: TextStyle(color: Colors.white),
                                       )
-                                    : (cap == true)
-                                        ? Text(
-                                            keysList1Cap[i],
-                                            style:
-                                                TextStyle(color: Colors.white),
-                                          )
-                                        : Text(
-                                            keysList1[i],
-                                            style:
-                                                TextStyle(color: Colors.white),
-                                          ),
+                                    : Text(
+                                        keysList1[i],
+                                        style: TextStyle(color: Colors.white),
+                                      ),
                                 style: TextButton.styleFrom(
                                   side: BorderSide(
                                     color: Colors.white,
@@ -214,16 +190,16 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                         children: [
                           for (var i = 0; i < keysList2.length; i++)
                             SizedBox(
-                              height: 35,
+                              height: 50,
                               width: widthS / keysList2.length,
                               child: TextButton(
                                 onPressed: () {
                                   setState(() {
                                     if (cap == true) {
-                                      inputFields += keysList2Cap[i];
+                                      inputFields.add(keysList2Cap[i]);
                                       currentKey = keysList2Cap[i];
                                     } else {
-                                      inputFields += keysList2[i];
+                                      inputFields.add(keysList2[i]);
                                       currentKey = keysList2[i];
                                     }
                                   });
@@ -252,30 +228,30 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
 
                       Row(
                         children: [
+                          SizedBox(
+                            width: (widthS / (keysList3.length + 1)) / 2,
+                          ),
                           for (var i = 0; i < keysList3.length; i++)
                             SizedBox(
-                              height: 35,
-                              width: widthS / keysList3.length,
+                              height: 50,
+                              width: (keysList3[i] == 'enter')
+                                  ? (widthS / (keysList3.length + 1)) +
+                                      ((widthS / (keysList3.length + 1)) / 2)
+                                  : widthS / (keysList3.length + 1),
                               child: TextButton(
                                 onPressed: () {
                                   setState(() {
                                     if (keysList3[i] == 'enter') {
-                                      inputFields += '\n';
-                                      currentKey = keysList3[i];
-                                    } else if (keysList3[i] == 'CapsOff' &&
-                                        cap == true) {
-                                      cap = false;
-                                      currentKey = keysList3[i];
-                                    } else if (keysList3[i] == 'CapsOff' &&
-                                        cap == false) {
-                                      cap = true;
-                                      currentKey = keysList3Cap[i];
+                                      inputFields.add('\n');
+                                      currentKey = (cap == false)
+                                          ? keysList3[i]
+                                          : keysList3Cap[i];
                                     } else {
                                       if (cap == true) {
-                                        inputFields += keysList3Cap[i];
+                                        inputFields.add(keysList3Cap[i]);
                                         currentKey = keysList3Cap[i];
                                       } else {
-                                        inputFields += keysList3[i];
+                                        inputFields.add(keysList3[i]);
                                         currentKey = keysList3[i];
                                       }
                                     }
@@ -291,19 +267,10 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                                     : (keysList3[i] == 'enter')
                                         ? Icon(
                                             Icons.arrow_downward_rounded,
-                                            color: Colors.white,
+                                            color: Colors.blue,
                                             size: 15,
                                           )
-                                        : (cap == false)
-                                            ? Icon(
-                                                Icons.brightness_auto_outlined,
-                                                color: Colors.white,
-                                                size: 15,
-                                              )
-                                            : Icon(
-                                                Icons.brightness_auto,
-                                                size: 20,
-                                              ),
+                                        : Text('??'),
                                 style: TextButton.styleFrom(
                                   side: BorderSide(
                                     color: Colors.white,
@@ -324,29 +291,68 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                         children: [
                           for (var i = 0; i < keysList4.length; i++)
                             SizedBox(
-                              height: 35,
+                              height: 50,
                               width: widthS / keysList4.length,
                               child: TextButton(
                                 onPressed: () {
                                   setState(() {
-                                    if (cap == true) {
-                                      inputFields += keysList4Cap[i];
+                                    if (keysList4[i] == 'delete') {
+                                      inputFields.removeLast();
+                                      currentKey = (cap == false)
+                                          ? keysList4[i]
+                                          : keysList4Cap[i];
+                                    } else if (keysList4[i] == 'CapsOff' &&
+                                        cap == true) {
+                                      cap = false;
+                                      currentKey = (cap == false)
+                                          ? keysList4[i]
+                                          : keysList4Cap[i];
+                                    } else if (keysList4[i] == 'CapsOff' &&
+                                        cap == false) {
+                                      cap = true;
+                                      currentKey = (cap == false)
+                                          ? keysList4[i]
+                                          : keysList4Cap[i];
+                                    } else if (cap == true) {
+                                      inputFields.add(keysList4Cap[i]);
                                       currentKey = keysList4Cap[i];
                                     } else {
-                                      inputFields += keysList4[i];
+                                      inputFields.add(keysList4[i]);
                                       currentKey = keysList4[i];
                                     }
                                   });
                                 },
-                                child: (cap == true)
+                                onLongPress: () {
+                                  setState(() {
+                                    (currentKey.toLowerCase() == 'delete')
+                                        ? inputFields.clear()
+                                        : 0;
+                                  });
+                                },
+                                child: (keysList4[i].length < 2)
                                     ? Text(
-                                        keysList4Cap[i],
+                                        (cap == true)
+                                            ? keysList4Cap[i]
+                                            : keysList4[i],
                                         style: TextStyle(color: Colors.white),
                                       )
-                                    : Text(
-                                        keysList4[i],
-                                        style: TextStyle(color: Colors.white),
-                                      ),
+                                    : (keysList4[i] == 'delete')
+                                        ? Icon(
+                                            Icons.cancel_presentation_rounded,
+                                            color: Colors.white,
+                                            size: 15,
+                                          )
+                                        : (cap == false)
+                                            ? Icon(
+                                                Icons.brightness_auto_outlined,
+                                                color: Colors.white,
+                                                size: 15,
+                                              )
+                                            : Icon(
+                                                Icons.brightness_auto,
+                                                size: 20,
+                                                color: Colors.blue,
+                                              ),
                                 style: TextButton.styleFrom(
                                   side: BorderSide(
                                     color: Colors.white,
@@ -367,26 +373,33 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                         children: [
                           for (var i = 0; i < keysList5.length; i++)
                             SizedBox(
-                              height: 35,
-                              width: widthS / keysList5.length,
+                              height: 50,
+                              width: (keysList5[i] == 'space')
+                                  ? (widthS / keysList5.length) * 3.5
+                                  : (widthS / keysList5.length) / 1.5,
                               child: TextButton(
                                 onPressed: () {
                                   setState(() {
                                     if (keysList5[i] == 'space') {
-                                      inputFields += ' ';
+                                      inputFields.add(' ');
+                                      currentKey = (cap == false)
+                                          ? keysList5[i]
+                                          : keysList5Cap[i];
                                     } else {
                                       if (cap == true) {
-                                        inputFields += keysList5Cap[i];
+                                        inputFields.add(keysList5Cap[i]);
                                         currentKey = keysList5Cap[i];
                                       } else {
-                                        inputFields += keysList5[i];
+                                        inputFields.add(keysList5[i]);
                                         currentKey = keysList5[i];
                                       }
                                     }
                                   });
                                 },
                                 child: Text(
-                                  keysList5[i],
+                                  (cap == true)
+                                      ? keysList5Cap[i]
+                                      : keysList5[i],
                                   style: TextStyle(color: Colors.white),
                                 ),
                                 style: TextButton.styleFrom(
