@@ -120,10 +120,12 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
 
                       //  Display Current Button which is pressed !! *********************************************
                       SizedBox(
-                        height: 35,
+                        height: 55,
                         width: 150,
                         child: Text(
-                          '[Pressed:   ' + currentKey + '  ]',
+                          '[Pressed:   ' +
+                              currentKey +
+                              '  ]\n\n\xA9 Aditya Showrov 😀',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               color: Colors.black,
@@ -324,10 +326,10 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                                 },
                                 onLongPress: () {
                                   setState(() {
-                                    (currentKey.toLowerCase() == 'delete')
-                                        ? inputFields.clear()
-                                        : 0;
+                                    if (keysList4[i] == 'delete')
+                                      inputFields.clear();
                                   });
+                                  print(inputFields);
                                 },
                                 child: (keysList4[i].length < 2)
                                     ? Text(
