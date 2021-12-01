@@ -153,6 +153,8 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                               child: TextButton(
                                 onPressed: () {
                                   setState(() {
+                                    cap = checkLock || capTemp;
+                                    capTemp = false;
                                     if (cap == true) {
                                       inputFields.add(keysList1Cap[i]);
                                       currentKey = keysList1Cap[i];
@@ -160,6 +162,7 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                                       inputFields.add(keysList1[i]);
                                       currentKey = keysList1[i];
                                     }
+                                    cap = checkLock || capTemp;
                                   });
                                 },
                                 onLongPress: () {},
@@ -199,6 +202,8 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                               child: TextButton(
                                 onPressed: () {
                                   setState(() {
+                                    cap = checkLock || capTemp;
+                                    capTemp = false;
                                     if (cap == true) {
                                       inputFields.add(keysList2Cap[i]);
                                       currentKey = keysList2Cap[i];
@@ -206,6 +211,7 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                                       inputFields.add(keysList2[i]);
                                       currentKey = keysList2[i];
                                     }
+                                    cap = checkLock || capTemp;
                                   });
                                 },
                                 child: Text(
@@ -246,6 +252,8 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                               child: TextButton(
                                 onPressed: () {
                                   setState(() {
+                                    cap = checkLock || capTemp;
+                                    capTemp = false;
                                     if (keysList3[i] == 'enter') {
                                       inputFields.add('\n');
                                       currentKey = (cap == false)
@@ -260,6 +268,7 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                                         currentKey = keysList3[i];
                                       }
                                     }
+                                    cap = checkLock || capTemp;
                                   });
                                 },
                                 child: (keysList3[i].length < 2)
@@ -302,6 +311,8 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                               child: TextButton(
                                 onPressed: () {
                                   setState(() {
+                                    cap = checkLock || capTemp;
+                                    capTemp = false;
                                     if (keysList4[i] == 'delete') {
                                       inputFields.removeLast();
                                       currentKey = (cap == false)
@@ -309,13 +320,23 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                                           : keysList4Cap[i];
                                     } else if (keysList4[i] == 'CapsOff' &&
                                         cap == true) {
-                                      cap = false;
+                                      capPressedNTimes++;
+                                      checkLock = capPressedNTimes == 2;
+                                      cap = checkLock || capTemp;
+                                      if (capPressedNTimes == 2) {
+                                        capPressedNTimes = 0;
+                                      }
+
                                       currentKey = (cap == false)
                                           ? keysList4[i]
                                           : keysList4Cap[i];
                                     } else if (keysList4[i] == 'CapsOff' &&
                                         cap == false) {
                                       cap = true;
+                                      capTemp = true;
+                                      checkLock = false;
+                                      capPressedNTimes = 1;
+
                                       currentKey = (cap == false)
                                           ? keysList4[i]
                                           : keysList4Cap[i];
@@ -326,6 +347,7 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                                       inputFields.add(keysList4[i]);
                                       currentKey = keysList4[i];
                                     }
+                                    cap = checkLock || capTemp;
                                   });
                                 },
                                 onLongPress: () {
@@ -387,6 +409,8 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                               child: TextButton(
                                 onPressed: () {
                                   setState(() {
+                                    cap = checkLock || capTemp;
+                                    capTemp = false;
                                     if (keysList5[i] == 'space') {
                                       inputFields.add(' ');
                                       currentKey = (cap == false)
@@ -401,6 +425,7 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                                         currentKey = keysList5[i];
                                       }
                                     }
+                                    cap = checkLock || capTemp;
                                   });
                                 },
                                 child: Text(

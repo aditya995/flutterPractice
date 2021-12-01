@@ -2,9 +2,16 @@ import 'package:flutter/material.dart';
 
 var currentKey = '';
 List inputFields = [];
-var cap = true;
 List saved = [];
 List timesOf_saved = [];
+
+// Caps Lock Variables
+
+var cap = false;
+var capTemp = false;
+var capPressedNTimes = 0;
+var checkLock = false;
+
 // DateTime _now = DateTime.now();
 // DateTime.now().minute;
 // print('timestamp: ${_now.hour}:${_now.minute}:${_now.second}.${_now.millisecond}');
