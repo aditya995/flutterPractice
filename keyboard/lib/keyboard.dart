@@ -72,7 +72,40 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                         ),
                       ),
                       SizedBox(
-                        height: 100,
+                        height: heightS / 1.75,
+                      ),
+
+                      //  Display Current Button which is pressed !! *********************************************
+                      SizedBox(
+                        height: 55,
+                        width: 150,
+                        child: Text(
+                          '[Pressed:   ' +
+                              currentKey +
+                              '  ]\n\n\xA9 Aditya Showrov 😀',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Colors.black,
+                              backgroundColor: Colors.white),
+                        ),
+                      ),
+
+                      //  Save it button ***********************************************************
+                      TextButton(
+                        onPressed: () {
+                          setState(() {
+                            timesOf_saved.add(
+                                '${DateTime.now().hour}:${DateTime.now().minute}:${DateTime.now().second} (h/m/s), date: ${DateTime.now().month}/${DateTime.now().day}/${DateTime.now().year} (M/D/Y)');
+                            saved.add([...inputFields]);
+                            inputFields.clear();
+                          });
+                        },
+                        child: Text(
+                          'Save it!',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        style: TextButton.styleFrom(
+                            backgroundColor: Colors.green[800]),
                       ),
 
                       //  Heading Before Input area *******************************************
@@ -98,39 +131,6 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                         child: SingleChildScrollView(
                             reverse: true,
                             child: Text('${inputStr(inputFields)}|')),
-                      ),
-
-                      //  Save it button ***********************************************************
-                      TextButton(
-                        onPressed: () {
-                          setState(() {
-                            timesOf_saved.add(
-                                '${DateTime.now().hour}:${DateTime.now().minute}:${DateTime.now().second} (h/m/s), date: ${DateTime.now().month}/${DateTime.now().day}/${DateTime.now().year} (M/D/Y)');
-                            saved.add([...inputFields]);
-                            inputFields.clear();
-                          });
-                        },
-                        child: Text(
-                          'Save it!',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                        style: TextButton.styleFrom(
-                            backgroundColor: Colors.green[800]),
-                      ),
-
-                      //  Display Current Button which is pressed !! *********************************************
-                      SizedBox(
-                        height: 55,
-                        width: 150,
-                        child: Text(
-                          '[Pressed:   ' +
-                              currentKey +
-                              '  ]\n\n\xA9 Aditya Showrov 😀',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              color: Colors.black,
-                              backgroundColor: Colors.white),
-                        ),
                       ),
                     ],
                   ),

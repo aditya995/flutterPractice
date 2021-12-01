@@ -16,6 +16,8 @@ var checkLock = false;
 // DateTime.now().minute;
 // print('timestamp: ${_now.hour}:${_now.minute}:${_now.second}.${_now.millisecond}');
 
+// Textbutton style on click
+
 String inputStr(List a) {
   var str = '';
   a.forEach((element) {
