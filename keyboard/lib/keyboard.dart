@@ -232,17 +232,17 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                                 ? Icon(
                                     Icons.cancel_presentation_rounded,
                                     color: Colors.white,
-                                    size: 15,
+                                    size: iconSize,
                                   )
                                 : (cap == false)
                                     ? Icon(
                                         Icons.brightness_auto_outlined,
                                         color: Colors.white,
-                                        size: 15,
+                                        size: iconSize,
                                       )
                                     : Icon(
                                         Icons.brightness_auto,
-                                        size: 20,
+                                        size: iconSize,
                                         color: Colors.blue,
                                       ),
                         style: TextButton.styleFrom(
@@ -305,13 +305,13 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                                 ? Icon(
                                     Icons.arrow_downward_rounded,
                                     color: Colors.blue,
-                                    size: 15,
+                                    size: iconSize,
                                   )
                                 : (keysList5[i] == 'space')
                                     ? Icon(
                                         Icons.horizontal_rule_rounded,
                                         color: Colors.white,
-                                        size: 15,
+                                        size: iconSize,
                                       )
                                     : Text('')
                             : Text(

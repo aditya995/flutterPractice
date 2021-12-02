@@ -24,8 +24,9 @@ var checkLock = false;
 // Key variables
 var keyHeight = 55.0;
 
-// Font settings
-var keyfontSize = 24.0;
+// Font and icon settings
+var iconSize = 20.0;
+var keyfontSize = 25.0;
 
 // Converting to String form list of string
 String inputStr(List a) {
