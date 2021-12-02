@@ -317,7 +317,7 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                             : Text(
                                 (cap == true) ? keysList5Cap[i] : keysList5[i],
                                 style: TextStyle(
-                                  fontSize: keyfontSize,
+                                  fontSize: emojiSize,
                                   color: Colors.white,
                                 ),
                               ),
@@ -362,6 +362,7 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                         Container(
                           constraints: BoxConstraints(
                             minWidth: 200,
+                            maxWidth: 300,
                             minHeight: 30,
                             // maxHeight: 150,
                           ),
@@ -375,6 +376,7 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                             'Time when saved : ${timesOf_saved[i]}\n Post: Id#__${i + 1}\n${inputStr(saved[i])}',
                             overflow: TextOverflow.clip,
                             style: TextStyle(
+                              fontSize: displayFieldFontSize,
                               fontWeight: FontWeight.w900,
                             ),
                           ),
@@ -440,7 +442,13 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: SingleChildScrollView(
-                      reverse: true, child: Text('${inputStr(inputFields)}|')),
+                      reverse: true,
+                      child: Text(
+                        '${inputStr(inputFields)}|',
+                        style: TextStyle(
+                          fontSize: inputFieldFontSize,
+                        ),
+                      )),
                 ),
                 SizedBox(
                   height: 300,
