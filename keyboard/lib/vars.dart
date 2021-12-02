@@ -11,13 +11,23 @@ var cap = false;
 var capTemp = false;
 var capPressedNTimes = 0;
 var checkLock = false;
+/*
 
 // DateTime _now = DateTime.now();
 // DateTime.now().minute;
 // print('timestamp: ${_now.hour}:${_now.minute}:${_now.second}.${_now.millisecond}');
 
-// Textbutton style on click
+// TODO::Textbutton style on click
 
+*/
+
+// Key variables
+var keyHeight = 55.0;
+
+// Font settings
+var keyfontSize = 24.0;
+
+// Converting to String form list of string
 String inputStr(List a) {
   var str = '';
   a.forEach((element) {
@@ -63,8 +73,28 @@ var keysList2Cap = [
   'O',
   'P',
 ];
-var keysList3 = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'enter'];
-var keysList3Cap = ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'ENTER'];
+var keysList3 = [
+  'a',
+  's',
+  'd',
+  'f',
+  'g',
+  'h',
+  'j',
+  'k',
+  'l',
+];
+var keysList3Cap = [
+  'A',
+  'S',
+  'D',
+  'F',
+  'G',
+  'H',
+  'J',
+  'K',
+  'L',
+];
 var keysList4 = [
   'CapsOff',
   'z',
@@ -87,5 +117,5 @@ var keysList4Cap = [
   'M',
   'DELETE',
 ];
-var keysList5 = ['😁', '😄', '😆', '😎', 'space', '😍', '😵', '🥴', '😡'];
-var keysList5Cap = ['😱', '😭', '😒', '🙁', 'SPACE', '🙄', '😑', '😐', '🙂'];
+var keysList5 = ['😁', '😄', '😆', '😎', 'space', '😍', '😵', 'enter'];
+var keysList5Cap = ['😱', '😭', '😒', '🙁', 'SPACE', '🙄', '😑', 'Enter'];
