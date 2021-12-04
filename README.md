@@ -1,5 +1,3 @@
-# Basic Layout of app pages
-
 ## Important concepts
  - Topic 001: create app, Use files, App name change, Icon change, debug mark removed from app tip right corner, scaffold, safearea, container
  - Topic 002: column, row
