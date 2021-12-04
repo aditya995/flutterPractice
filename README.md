@@ -17,7 +17,7 @@ return MaterialApp(
  - Topic 007: flex, spacer
  - Topic 008: card, sixedbox
  - Topic 009: image
- - Topic 000: icon
+ - Topic 010: icon
  - Topic 011: textButton
  - Topic 012: iconButton
  - Topic 013: floatingActionButton
