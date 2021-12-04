@@ -1,7 +1,7 @@
 # Basic Layout
 
 ## Notes
- -  Creating a flutter project 
+ -  # Creating a flutter project 
 flutter create app_name
  -  # Basic Structure of a page
 MaterialApp > SafeArea > SafeArea
