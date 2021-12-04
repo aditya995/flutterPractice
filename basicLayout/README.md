@@ -1,7 +1,10 @@
 # Basic Layout
 
-** date: 10 nov 2021 **
 ## Notes
+ -  Creating a flutter project 
+flutter create app_name
+ -  # Basic Structure of a page
+MaterialApp > SafeArea > SafeArea
  -  # Uncomment line: 61 in *pubspec.yaml*, To Use files in the project.
 ```
 assets:
