@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.practice_app">
+    package="com.example.basic_layout">
    <application
-        android:label="Brain Storm"
+        android:label="Basic Layout"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
