@@ -1,4 +1,11 @@
 # Basic Layout of app pages
+MaterialApp > SafeArea > SafeArea
+
+```
+return MaterialApp(
+      //  To wipe out "debug" mark in the right side of screen
+      debugShowCheckedModeBanner: false,
+```
 
 ## Important concepts
  - Topic 001: create app, Use files, App name change, Icon change, debug mark removed from app tip right corner, scaffold, safearea, container
