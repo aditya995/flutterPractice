@@ -17,8 +17,24 @@ class MyApp extends StatelessWidget {
       ),
       home: SafeArea(
         child: Scaffold(
-          appBar: AppBar(),
-          body: Container(),
+          appBar: AppBar(
+            title: Text('AppBar'),
+            centerTitle: true,
+          ),
+          body: Container(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              // mainAxisSize: MainAxisSize.min,
+              verticalDirection: VerticalDirection.up,
+              textBaseline: TextBaseline.ideographic,
+              children: [
+                Text('Adata 1'),
+                Text('Cdata 2'),
+                Text('Bdata 3'),
+                Text('Ddata 4'),
+              ],
+            ),
+          ),
         ),
       ),
     );
