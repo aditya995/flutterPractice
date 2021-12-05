@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -18,20 +19,29 @@ class MyApp extends StatelessWidget {
       home: SafeArea(
         child: Scaffold(
           appBar: AppBar(
-            title: Text('AppBar'),
+            title: const Text('AppBar'),
             centerTitle: true,
           ),
           body: Container(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              // mainAxisAlignment: MainAxisAlignment.center,
+              // mainAxisAlignment: MainAxisAlignment.end,
+              // mainAxisAlignment: MainAxisAlignment.start,
+
               // mainAxisSize: MainAxisSize.min,
-              verticalDirection: VerticalDirection.up,
-              textBaseline: TextBaseline.ideographic,
-              children: [
-                Text('Adata 1'),
-                Text('Cdata 2'),
-                Text('Bdata 3'),
-                Text('Ddata 4'),
+
+              // verticalDirection: VerticalDirection.up,
+
+              children: const [
+                Text(' 1Adata 1'),
+                Text(' 2Adata 2'),
+                Text(' 10Adata 10'),
+                Text(' 11Adata 11'),
+                Text(' 21Adata 12'),
+                Text(' 22Adata 100'),
               ],
             ),
           ),
