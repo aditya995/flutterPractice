@@ -4,7 +4,13 @@
  -  ## Creating a flutter project 
 flutter create app_name
  -  ## Basic Structure of a page
-MaterialApp > SafeArea > SafeArea
+MaterialApp > SafeArea > Scaffold
+ -  ## Separate in multiple files as stateful or stateless widget and import as packges
+```
+import 'package:practice_app/home_page.dart';
+    MaterialApp > SafeArea > Scaffold
+        body: myHomePage()),
+```
  -  ## Uncomment line: 61 in *pubspec.yaml*, To Use files in the project.
 ```
 assets:

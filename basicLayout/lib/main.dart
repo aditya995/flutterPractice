@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practice_app/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,10 +24,7 @@ class MyApp extends StatelessWidget {
               child: Text("Great work!"),
             ),
           ),
-
-          body: Container(
-            child: Image(image: AssetImage('files/images/box.png')),
-          ),
+          body: myHomePage(),
         ),
       ),
     );
