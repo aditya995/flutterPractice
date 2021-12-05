@@ -28,7 +28,7 @@ assets:
 
  - ## To Change IOS app Icon: go to the `Runner` folder
 
-![Change Icon Android](files/images/ChangeApp_Icon_IOS.JPG)
+![Change Icon IOS](files/images/ChangeApp_Icon_IOS.JPG)
 
 
  - ## To Change App Name Android: go to the `AndroidManifest.xml` folder
