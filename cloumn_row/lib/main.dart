@@ -1,4 +1,5 @@
 import 'package:cloumn_row/_column.dart';
+import 'package:cloumn_row/_row.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,8 +26,9 @@ class MyApp extends StatelessWidget {
           ),
           body: Column(
             children: [
-              learnColumn(),
-              learnColumn(),
+              // learnColumn(),
+              // learnColumn(),
+              learnRow(),
             ],
           ),
         ),
