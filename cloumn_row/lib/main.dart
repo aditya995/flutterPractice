@@ -1,3 +1,4 @@
+import 'package:cloumn_row/_column.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -22,28 +23,11 @@ class MyApp extends StatelessWidget {
             title: const Text('AppBar'),
             centerTitle: true,
           ),
-          body: Container(
-            child: Column(
-              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              // mainAxisAlignment: MainAxisAlignment.center,
-              // mainAxisAlignment: MainAxisAlignment.end,
-              // mainAxisAlignment: MainAxisAlignment.start,
-
-              // mainAxisSize: MainAxisSize.min,
-
-              // verticalDirection: VerticalDirection.up,
-
-              children: const [
-                Text(' 1Adata 1'),
-                Text(' 2Adata 2'),
-                Text(' 10Adata 10'),
-                Text(' 11Adata 11'),
-                Text(' 21Adata 12'),
-                Text(' 22Adata 100'),
-              ],
-            ),
+          body: Column(
+            children: [
+              learnColumn(),
+              learnColumn(),
+            ],
           ),
         ),
       ),
