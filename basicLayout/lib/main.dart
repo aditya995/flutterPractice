@@ -21,10 +21,15 @@ class MyApp extends StatelessWidget {
           //  This class provides APIs for showing drawers and bottom sheets.
           appBar: AppBar(
             title: const Center(
-              child: Text("Great work!"),
+              child: Text("Container"),
             ),
           ),
           body: myHomePage(),
+          floatingActionButton: FloatingActionButton(
+            child: Text('ButtonText'),
+            onPressed: () {},
+          ),
+          floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
         ),
       ),
     );
