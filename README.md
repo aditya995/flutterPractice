@@ -1,5 +1,5 @@
 ## Important concepts
- - Topic 001: create app, Separate codes in multiple files, Use files, App name change, Icon change, debug mark removed from app tip right corner, scaffold, safearea, container
+ - Topic 001: create app, clone from git, Separate codes in multiple files, Use files, App name change, Icon change, debug mark removed from app tip right corner, scaffold, safearea, container
  - Topic 002: column, row
  - Topic 003: center, align, padding
  - Topic 004: text
