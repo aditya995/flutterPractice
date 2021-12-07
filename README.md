@@ -20,7 +20,7 @@ git clone https://github.com/aditya995/flutterPractice.git
 
 Connect to a remote github repo--
  - git remote   // to check if it is connected to github remote repository
- - git remote add origin https://github.com/aditya995/dartCodeVault.git 
+ - git remote add origin https://github.com/aditya995/flutterPractice.git 
 // To add the origin for this folder to push to that (remote) dartCodeVault repo in github.com
 
  - git branch   // Check the current branch
