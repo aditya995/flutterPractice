@@ -3,6 +3,9 @@
 ## Notes
  - ### Creating a flutter project 
 flutter create app_name
+ - ### Clone a flutter project from github
+  *Get the packages required in VsCode*
+  ![Get packages in VsCode](files/images/getpack.PNG)
  - ### Basic Structure of a page
 MaterialApp > SafeArea > Scaffold
  - ### Separate in multiple files as stateful or stateless widget and import as packges
