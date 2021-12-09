@@ -72,7 +72,8 @@ git checkout b_
 ```
  - sixedbox, expanded, flexible
 ```
-git checkout b_```
+git checkout b_
+```
  - image
 ```
 git checkout b_
