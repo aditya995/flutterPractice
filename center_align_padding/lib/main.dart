@@ -85,7 +85,7 @@ class MyApp extends StatelessWidget {
             // ),
 
             // Align ()
-            // If one of the is inside the Align() widget, all gets aligned!!
+            // If one of the is inside the Align() widget, all gets aligned!
             Container(
               color: Colors.amber,
               child: Text(
