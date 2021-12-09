@@ -89,17 +89,17 @@ git checkout b_
 ### Buttons
  - iconButton
 ```
-git checkout b_
+git checkout btn_
 ```
  - floatingActionButton
 ```
-git checkout b_
+git checkout btn_
 ```
  - elevatedbutton
 ```
-git checkout b_
+git checkout btn_
 ```
  - textButton
 ```
-git checkout b_
+git checkout btn_
 ```
