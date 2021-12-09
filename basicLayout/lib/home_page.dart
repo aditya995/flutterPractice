@@ -15,7 +15,7 @@ class myHomePage extends StatelessWidget {
           height: 200,
           width: 200,
           // Or use constraints
-          constraints: BoxConstraints(
+          constraints: const BoxConstraints(
             minHeight: 100,
             maxHeight: 300,
             minWidth: 100,
@@ -23,11 +23,10 @@ class myHomePage extends StatelessWidget {
           ),
           child: Image(
             image: AssetImage('files/images/box.png'),
-            height: 250,
-            width: 250,
           ),
           // Text('ggg g g g g g'),
           decoration: BoxDecoration(
+            // When decoration is used must define all colors in here, not in container, else throughs error
             color: Colors.amber.withOpacity(0.3),
             border: Border.all(color: Colors.black, width: 5),
 
@@ -36,7 +35,7 @@ class myHomePage extends StatelessWidget {
             borderRadius: BorderRadius.circular(15),
             // borderRadius: BorderRadius.all(Radius.circular(15)),
 
-            boxShadow: [
+            boxShadow: const [
               BoxShadow(
                 color: Colors.black,
                 blurRadius: 5,
@@ -58,17 +57,15 @@ class myHomePage extends StatelessWidget {
             ],
           ),
           margin: EdgeInsets.only(right: 10),
-          // foregroundDecoration: ,
         ),
         SizedBox(height: 90),
         Container(
+          margin: EdgeInsets.all(30),
+          padding: EdgeInsets.all(25),
           height: 300,
           width: 300,
-          child: Image(
-            image: AssetImage('files/images/box.png'),
-            height: 250,
-            width: 250,
-          ),
+          child: Text(
+              'data data data data data data data data data data data data data data data data data data data data data data data data '),
           // Text(
           //   'Data',
           //   style: TextStyle(
@@ -78,6 +75,7 @@ class myHomePage extends StatelessWidget {
           //     // backgroundColor: Colors.white,
           //   ),
           // ),
+          clipBehavior: Clip.antiAlias,
           decoration: BoxDecoration(
             // color: Colors.red,
             gradient: LinearGradient(
@@ -98,6 +96,7 @@ class myHomePage extends StatelessWidget {
 
             // Not useful I guess !!!****
             backgroundBlendMode: BlendMode.difference,
+            shape: BoxShape.circle,
           ),
         ),
       ],
