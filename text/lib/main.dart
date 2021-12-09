@@ -128,7 +128,7 @@ class myTextWidget extends StatelessWidget {
                 border: Border.all(color: Colors.black, width: 5),
               ),
               child: const Text(
-                'Text Data Text Data Text Data Text Data Text Data\nText Data',
+                'Text Data Text Data Text Data Text Data Text Data\nText Data ',
                 style: TextStyle(
                   color: Colors.green,
                   fontSize: 25,
