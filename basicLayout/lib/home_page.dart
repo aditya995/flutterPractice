@@ -65,7 +65,7 @@ class myHomePage extends StatelessWidget {
           height: 300,
           width: 300,
           child: Text(
-              'data data data data data data data data data data data data data data data data data data data data data data data data '),
+              'data data data data data data data data data data data data data data data data data data data data data data '),
           // Text(
           //   'Data',
           //   style: TextStyle(
