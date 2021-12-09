@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
             children: [
               // learnColumn(),
               // learnColumn(),
+
               learnRow(),
             ],
           ),
