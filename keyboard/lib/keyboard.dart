@@ -1,5 +1,5 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-
 import 'vars.dart';
 
 class MyKeyBoard extends StatefulWidget {
@@ -10,6 +10,11 @@ class MyKeyBoard extends StatefulWidget {
 }
 
 class _MyKeyBoardState extends State<MyKeyBoard> {
+  playAudio() {
+    AudioCache player = AudioCache(prefix: 'files/');
+    player.play('01.wav');
+  }
+
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
@@ -38,6 +43,7 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                       width: widthS / keysList1.length,
                       child: TextButton(
                         onPressed: () {
+                          playAudio();
                           setState(() {
                             cap = checkLock || capTemp;
                             capTemp = false;
@@ -87,6 +93,7 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                       width: widthS / keysList2.length,
                       child: TextButton(
                         onPressed: () {
+                          playAudio();
                           setState(() {
                             cap = checkLock || capTemp;
                             capTemp = false;
@@ -133,6 +140,7 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                       width: widthS / (keysList3.length + 1),
                       child: TextButton(
                         onPressed: () {
+                          playAudio();
                           setState(() {
                             cap = checkLock || capTemp;
                             capTemp = false;
@@ -176,6 +184,7 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                       width: widthS / keysList4.length,
                       child: TextButton(
                         onPressed: () {
+                          playAudio();
                           setState(() {
                             cap = checkLock || capTemp;
                             capTemp = false;
@@ -217,6 +226,7 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                           });
                         },
                         onLongPress: () {
+                          playAudio();
                           setState(() {
                             if (keysList4[i] == 'delete') inputFields.clear();
                           });
@@ -274,6 +284,7 @@ class _MyKeyBoardState extends State<MyKeyBoard> {
                               : (widthS / keysList5.length) / 1.45,
                       child: TextButton(
                         onPressed: () {
+                          playAudio();
                           setState(() {
                             cap = checkLock || capTemp;
                             capTemp = false;
