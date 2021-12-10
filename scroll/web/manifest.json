@@ -1,6 +1,6 @@
 {
-    "name": "card",
-    "short_name": "card",
+    "name": "scroll",
+    "short_name": "scroll",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
