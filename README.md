@@ -64,7 +64,7 @@ git checkout b_card
 ```
  - singleChildScrollView
 ```
-git checkout b_
+git checkout b_singleChildScrollView
 ```
  - flex, spacer
 ```
