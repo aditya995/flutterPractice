@@ -36,6 +36,7 @@ Connect to a remote github repo--
  - Suggestion on error `ctrl` + `.`
  - Open Documentation: Hover over the element `ctrl` + `MouseClick`
  - Change current working file: `ctrl` + `TAB`
+ - Open command palette `ctrl` + `shft` + `p`and type 'reload window' to reload window, dont need to close to apply extensions
 
 ## Command Prompt shortcuts
  - Get file names from that directory in the terminal `tab` or `shift` + `tab`
