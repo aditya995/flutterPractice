@@ -55,7 +55,7 @@ git checkout b_column_row
 ```
 git checkout b_center_align_padding
 ```
- - text
+ - text, richtext
 ```
 git checkout b_text
 ```
@@ -66,6 +66,10 @@ git checkout b_card
  - singleChildScrollView->[properties: controller(scroll), physics]
 ```
 git checkout b_singleChildScrollView
+```
+ - stateful, stateless, separate in multiple files as widget
+```
+git checkout b_organize_code
 ```
  - flex, spacer
 ```
@@ -104,3 +108,18 @@ git checkout btn_
 ```
 git checkout btn_
 ```
+ - gesturedetect
+```
+git checkout btn_
+```
+### Animation
+ - lottie animation https://pub.dev/packages/lottie
+```
+git checkout anim_lottie
+```
+### Audio play
+ - Audioplayers https://pub.dev/packages/audioplayers
+```
+git checkout audio_audioplayers
+```
+## TODO:: provider, bloc model, state managemet, paint, dragable elements, json serialization, video play, time *DateTime.now().hour*, animating elements, hold some time duration, 
