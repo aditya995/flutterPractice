@@ -73,7 +73,7 @@ git checkout b_organize_code
 ```
  - flex, spacer
 ```
-git checkout b_
+git checkout b_flex_spacer
 ```
  - sixedbox, expanded, flexible
 ```
