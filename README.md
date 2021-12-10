@@ -122,4 +122,14 @@ git checkout anim_lottie
 ```
 git checkout audio_audioplayers
 ```
+### Fonts
+ - Google fonts https://pub.dev/packages/google_fonts
+```
+git checkout fonts_
+```
+### Icons
+ - Fontawesome icons https://pub.dev/packages/font_awesome_flutter
+```
+git checkout icon_
+```
 ## TODO:: provider, bloc model, state managemet, paint, dragable elements, json serialization, video play, time *DateTime.now().hour*, animating elements, hold some time duration, 
