@@ -10,11 +10,11 @@ flutter create app_name
   *Get the packages required in VsCode*
   ![Get packages in VsCode](files/images/getpack.png)
  - ### Basic Structure of a page
-MaterialApp > SafeArea > Scaffold
+MaterialApp > Scaffold > SafeArea
  - ### Separate in multiple files as stateful or stateless widget and import as packges
 ```
 import 'package:practice_app/home_page.dart';
-    MaterialApp > SafeArea > Scaffold
+    MaterialApp > Scaffold > SafeArea
         body: myHomePage()),
 ```
  - ### Uncomment line: 61 in *pubspec.yaml*, To Use files in the project.
