@@ -12,12 +12,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Text widget',
       home: SafeArea(
         child: Scaffold(
-          body: myTextWidget(),
+          body: SingleChildScrollView(child: myTextWidget()),
         ),
       ),
     );
@@ -138,6 +138,54 @@ class myTextWidget extends StatelessWidget {
                 textAlign: TextAlign.end,
               ),
               clipBehavior: Clip.antiAliasWithSaveLayer,
+            ),
+            RichText(
+              text: const TextSpan(
+                text: ' First ',
+                style: TextStyle(
+                  color: Colors.black,
+                ),
+                children: [
+                  TextSpan(
+                    text: ' second ',
+                    style: TextStyle(
+                      color: Colors.blue,
+                      backgroundColor: Colors.orange,
+                    ),
+                  ),
+                  TextSpan(
+                    text: ' third ',
+                    style: TextStyle(
+                      color: Colors.green,
+                      backgroundColor: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const Text.rich(
+              TextSpan(
+                text: ' First ',
+                style: TextStyle(
+                  color: Colors.black,
+                ),
+                children: [
+                  TextSpan(
+                    text: ' second ',
+                    style: TextStyle(
+                      color: Colors.blue,
+                      backgroundColor: Colors.orange,
+                    ),
+                  ),
+                  TextSpan(
+                    text: ' third ',
+                    style: TextStyle(
+                      color: Colors.green,
+                      backgroundColor: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
