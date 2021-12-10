@@ -60,7 +60,7 @@ git checkout b_text
 ```
  - card 
 ```
-git checkout b_
+git checkout b_card
 ```
  - singleChildScrollView
 ```
