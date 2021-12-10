@@ -77,7 +77,7 @@ git checkout b_flex_spacer
 ```
  - sixedbox, expanded, flexible
 ```
-git checkout b_
+git checkout b_sizedbox_expanded_flexible
 ```
  - image
 ```
