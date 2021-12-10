@@ -62,7 +62,7 @@ git checkout b_text
 ```
 git checkout b_card
 ```
- - singleChildScrollView
+ - singleChildScrollView->[properties: controller(scroll), physics]
 ```
 git checkout b_singleChildScrollView
 ```
