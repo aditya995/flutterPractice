@@ -1,7 +1,7 @@
 # Basic Layout
 
 ## Notes
- - ### Install plugin in VsCode flutter, Dart, error lens, Dracula official, Bracket Pair Colorizer
+ - ### Install plugin in VsCode-> flutter, Awesome Flutter Snippets, Dart, error lens, Dracula official, Bracket Pair Colorizer
  - ### In VsCode Enable -> Dart: Preview Flutter Ui Guides
 ![Enable Preview Flutter UI Guides](files/images/UIguidesForParentChild_inFlutter.PNG)
  - ### Creating a flutter project 
