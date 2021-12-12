@@ -132,4 +132,17 @@ git checkout fonts_
 ```
 git checkout icon_
 ```
-## TODO:: provider, bloc model, state managemet, paint, dragable elements, json serialization, video play, time *DateTime.now().hour*, animating elements, hold some time duration, 
+https://notepad.pw/33yab9v2
+
+## TODO:: init()
+dispose()
+provider, 
+bloc model, 
+state managemet, 
+custom paint, 
+dragable elements, 
+json serialization, 
+video play, 
+time DateTime.now().hour, 
+animating elements, 
+hold some time duration,
