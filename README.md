@@ -125,16 +125,17 @@ git checkout audio_audioplayers
 ### Fonts
  - Google fonts https://pub.dev/packages/google_fonts
 ```
-git checkout fonts_
+git checkout fonts_google_fonts
 ```
 ### Icons
  - Fontawesome icons https://pub.dev/packages/font_awesome_flutter
 ```
 git checkout icon_
 ```
-https://notepad.pw/33yab9v2
 
-## TODO:: init()
+
+## TODO:: https://notepad.pw/33yab9v2
+init()
 dispose()
 provider, 
 bloc model, 
