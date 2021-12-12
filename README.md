@@ -130,7 +130,7 @@ git checkout fonts_google_fonts
 ### Icons
  - Fontawesome icons https://pub.dev/packages/font_awesome_flutter
 ```
-git checkout icon_
+git checkout icon_fontawesome
 ```
 
 
